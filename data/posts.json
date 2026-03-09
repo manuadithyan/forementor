@@ -1,1 +1,23 @@
-
+[
+  {
+    "title": "Why SMEs Need a Data Strategy Before They Scale",
+    "date": "2026-03-09",
+    "summary": "A simple framework to make data usable and decisions consistent before adding tools.",
+    "category": "Insight",
+    "link": "blog/data-strategy.html"
+  },
+  {
+    "title": "CRM Isn’t a Tool — It’s a Customer Lifecycle System",
+    "date": "2026-03-09",
+    "summary": "How to design lead-to-loyalty flows that improve conversion and retention.",
+    "category": "Insight",
+    "link": "blog/crm-growth.html"
+  },
+  {
+    "title": "Market Entry in the GCC: What to Structure First",
+    "date": "2026-03-09",
+    "summary": "Positioning, compliance planning, and KPI visibility before expansion.",
+    "category": "Insight",
+    "link": "blog/gcc-market-entry.html"
+  }
+]
