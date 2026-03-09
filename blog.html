@@ -23,15 +23,12 @@
   </script>
 </head>
 <body class="bg-white text-slate-900">
-  <!-- Top bar -->
+
+  <!-- Header -->
   <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
       <a href="index.html" class="flex items-center gap-3">
-        <img src="assets/logo.png" alt="FOREMENTOR logo" class="h-10 w-auto" />
-        <div class="leading-tight">
-          <div class="text-lg font-semibold tracking-tight">FOREMENTOR</div>
-          <div class="text-sm text-slate-500">Delivering Excellence</div>
-        </div>
+        <img src="Logo.svg" alt="FOREMENTOR logo" class="h-12 w-auto scale-125 origin-left" />
       </a>
 
       <nav class="hidden items-center gap-6 text-sm font-medium md:flex">
@@ -43,9 +40,11 @@
       </nav>
 
       <div class="flex items-center gap-2">
-        <a href="contact.html#whatsapp"
+        <a href="https://wa.me/971505017340"
+           target="_blank"
+           rel="noopener"
            class="hidden rounded-full bg-foreorange px-4 py-2 text-sm font-semibold text-white shadow-soft hover:opacity-90 md:inline-flex">
-           WhatsApp Now
+          WhatsApp Now
         </a>
         <button id="menuBtn" class="inline-flex rounded-xl border border-slate-200 p-2 md:hidden" aria-label="Open menu">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -64,81 +63,58 @@
         <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="blog.html">Insights</a>
         <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="contact.html">Contact</a>
         <a class="mt-2 inline-flex items-center justify-center rounded-full bg-foreorange px-4 py-2 font-semibold text-white"
-           href="contact.html#whatsapp">WhatsApp Now</a>
+           href="https://wa.me/971505017340"
+           target="_blank"
+           rel="noopener">
+          WhatsApp Now
+        </a>
       </div>
     </div>
   </header>
 
-<main>
-  <section class="bg-gradient-to-b from-slate-50 via-white to-white">
-    <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
-      <div class="max-w-3xl">
-        <div class="text-xs font-semibold text-slate-500">Insights</div>
-        <h1 class="mt-2 text-4xl font-extrabold tracking-tight">Practical Thinking for Business Growth</h1>
-        <p class="mt-4 text-lg text-slate-600">
-          Short, actionable insights. (You can replace these with real posts later or connect a CMS.)
-        </p>
-      </div>
+  <main>
+    <section class="bg-gradient-to-b from-slate-50 via-white to-white">
+      <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
+        <div class="max-w-3xl">
+          <div class="text-xs font-semibold text-slate-500">Insights</div>
+          <h1 class="mt-2 text-4xl font-extrabold tracking-tight">Practical Thinking for Business Growth</h1>
+          <p class="mt-4 text-lg text-slate-600">
+            Actionable insights on strategy, CRM, data governance, performance systems, and business growth across the Middle East.
+          </p>
+        </div>
 
-      <div class="mt-10 grid gap-6 md:grid-cols-3">
-        
-          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
-            <div class="text-xs font-semibold text-slate-500">Insight</div>
-            <h3 class="mt-2 text-lg font-bold tracking-tight">Why SMEs Need a Data Strategy Before They Scale</h3>
-            <p class="mt-2 text-sm text-slate-600">A simple framework to make data usable and decisions consistent before adding tools.</p>
-            <a class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-foreblue hover:opacity-90" href="blog.html">
-              Read more <span aria-hidden="true">→</span>
+        <!-- Dynamic blog posts -->
+        <div id="blogPosts" class="mt-10 grid gap-6 md:grid-cols-3"></div>
+
+        <!-- Subscription CTA -->
+        <div class="mt-12 rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
+          <h2 class="text-2xl font-bold tracking-tight">Want weekly insights?</h2>
+          <p class="mt-2 text-sm text-slate-600">
+            Send us a message and we’ll share updates relevant to your industry.
+          </p>
+          <div class="mt-5 flex flex-col gap-3 sm:flex-row">
+            <a href="mailto:hello@forementor.com?subject=Subscribe%20to%20FOREMENTOR%20Insights"
+               class="inline-flex items-center justify-center rounded-full bg-foreblue px-6 py-3 text-sm font-semibold text-white shadow-soft hover:opacity-90">
+              Subscribe by Email
             </a>
-          <div id="blogPosts" class="mt-10 grid gap-6 md:grid-cols-3"></div>
-
-
-          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
-            <div class="text-xs font-semibold text-slate-500">Insight</div>
-            <h3 class="mt-2 text-lg font-bold tracking-tight">CRM Isn’t a Tool — It’s a Customer Lifecycle System</h3>
-            <p class="mt-2 text-sm text-slate-600">How to design lead-to-loyalty flows that improve conversion and retention.</p>
-            <a class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-foreblue hover:opacity-90" href="blog.html">
-              Read more <span aria-hidden="true">→</span>
+            <a href="https://wa.me/971505017340"
+               target="_blank"
+               rel="noopener"
+               class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 hover:border-slate-300">
+              Subscribe via WhatsApp
             </a>
-          <div id="blogPosts" class="mt-10 grid gap-6 md:grid-cols-3"></div>
-
-
-          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
-            <div class="text-xs font-semibold text-slate-500">Insight</div>
-            <h3 class="mt-2 text-lg font-bold tracking-tight">Market Entry in the GCC: What to Structure First</h3>
-            <p class="mt-2 text-sm text-slate-600">Positioning, operating model, compliance planning, and KPI visibility.</p>
-            <a class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-foreblue hover:opacity-90" href="blog.html">
-              Read more <span aria-hidden="true">→</span>
-            </a>
-         <div id="blogPosts" class="mt-10 grid gap-6 md:grid-cols-3"></div>
-
-      </div>
-
-      <div class="mt-12 rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
-        <h2 class="text-2xl font-bold tracking-tight">Want weekly insights?</h2>
-        <p class="mt-2 text-sm text-slate-600">Send us a message and we’ll share updates relevant to your industry.</p>
-        <div class="mt-5 flex flex-col gap-3 sm:flex-row">
-          <a href="mailto:hello@forementor.com?subject=Subscribe%20to%20FOREMENTOR%20Insights"
-             class="inline-flex items-center justify-center rounded-full bg-foreblue px-6 py-3 text-sm font-semibold text-white shadow-soft hover:opacity-90">
-            Subscribe by Email
-          </a>
-          <a href="https://wa.me/971505017340" target="_blank" rel="noopener"
-             class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 hover:border-slate-300">
-            Subscribe via WhatsApp
-          </a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
+
+  <!-- Footer -->
   <footer class="border-t border-slate-200 bg-slate-50">
     <div class="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-4">
       <div>
         <div class="flex items-center gap-3">
-          <img src="assets/logo.png" alt="FOREMENTOR logo" class="h-10 w-auto" />
-          <div>
-            <div class="text-lg font-semibold tracking-tight">FOREMENTOR</div>
-            <div class="text-sm text-slate-500">Delivering Excellence</div>
-          </div>
+          <img src="Logo.svg" alt="FOREMENTOR logo" class="h-12 w-auto" />
         </div>
         <p class="mt-4 text-sm text-slate-600">
           We design intelligence & market architecture, execute with precision, and maintain for sustainable growth.
@@ -186,42 +162,49 @@
     </div>
   </footer>
 
+  <!-- Menu + footer year -->
   <script>
     const btn = document.getElementById('menuBtn');
     const menu = document.getElementById('mobileMenu');
-    if (btn && menu) {{
-      btn.addEventListener('click', () => {{
+
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
         menu.classList.toggle('hidden');
-      }});
-    }}
+      });
+    }
+
     const y = document.getElementById('year');
     if (y) y.textContent = new Date().getFullYear();
   </script>
-<script>
-async function loadPosts() {
-  try {
-    const response = await fetch('data/posts.json');
-    const posts = await response.json();
 
-    const container = document.getElementById('blogPosts');
+  <!-- Dynamic blog loader -->
+  <script>
+    async function loadPosts() {
+      try {
+        const response = await fetch('data/posts.json');
+        const posts = await response.json();
 
-    container.innerHTML = posts.map(post => `
-      <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
-        <div class="text-xs font-semibold text-slate-500">${post.category}</div>
-        <h3 class="mt-2 text-lg font-bold tracking-tight">${post.title}</h3>
-        <div class="mt-1 text-xs text-slate-400">${post.date}</div>
-        <p class="mt-2 text-sm text-slate-600">${post.summary}</p>
-        <a class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-foreblue hover:opacity-90" href="${post.link}">
-          Read more <span aria-hidden="true">→</span>
-        </a>
-      </article>
-    `).join('');
-  } catch (error) {
-    console.error('Error loading posts:', error);
-  }
-}
+        const container = document.getElementById('blogPosts');
+        if (!container) return;
 
-loadPosts();
-</script>
+        container.innerHTML = posts.map(post => `
+          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="text-xs font-semibold text-slate-500">${post.category}</div>
+            <h3 class="mt-2 text-lg font-bold tracking-tight">${post.title}</h3>
+            <div class="mt-1 text-xs text-slate-400">${post.date}</div>
+            <p class="mt-2 text-sm text-slate-600">${post.summary}</p>
+            <a class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-foreblue hover:opacity-90" href="${post.link}">
+              Read more <span aria-hidden="true">→</span>
+            </a>
+          </article>
+        `).join('');
+      } catch (error) {
+        console.error('Error loading posts:', error);
+      }
+    }
+
+    loadPosts();
+  </script>
+
 </body>
 </html>
