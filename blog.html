@@ -1,210 +1,373 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Insights — FOREMENTOR</title>
-  <meta name="description" content="Read FOREMENTOR insights on strategy, CRM lifecycle, data governance, and performance management.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            foreblue: '#1E63B5',
-            foreorange: '#F58220',
-          },
-          boxShadow: {
-            soft: '0 10px 30px rgba(2, 6, 23, 0.08)',
-          }
-        }
-      }
-    }
-  </script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Insights — FOREMENTOR</title>
+
+<meta name="description"
+content="Strategic insights on business growth, CRM systems, data governance and performance management in the Middle East.">
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+foreblue: '#1E63B5',
+foreorange: '#F58220'
+},
+boxShadow: {
+soft: '0 10px 30px rgba(2,6,23,0.08)'
+}
+}
+}
+}
+</script>
 </head>
+
 <body class="bg-white text-slate-900">
 
-  <!-- Header -->
-  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
-    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="Logo.svg" alt="FOREMENTOR logo" class="h-12 w-auto scale-125 origin-left" />
-      </a>
+<!-- HEADER -->
 
-      <nav class="hidden items-center gap-6 text-sm font-medium md:flex">
-        <a class="hover:text-foreblue" href="index.html">Home</a>
-        <a class="hover:text-foreblue" href="about.html">About</a>
-        <a class="hover:text-foreblue" href="services.html">Services</a>
-        <a class="hover:text-foreblue" href="blog.html">Insights</a>
-        <a class="hover:text-foreblue" href="contact.html">Contact</a>
-      </nav>
+<header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
 
-      <div class="flex items-center gap-2">
-        <a href="https://wa.me/971505017340"
-           target="_blank"
-           rel="noopener"
-           class="hidden rounded-full bg-foreorange px-4 py-2 text-sm font-semibold text-white shadow-soft hover:opacity-90 md:inline-flex">
-          WhatsApp Now
-        </a>
-        <button id="menuBtn" class="inline-flex rounded-xl border border-slate-200 p-2 md:hidden" aria-label="Open menu">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
-        </button>
-      </div>
-    </div>
+<div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
 
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white md:hidden">
-      <div class="mx-auto grid max-w-7xl gap-1 px-4 py-3 text-sm font-medium">
-        <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="index.html">Home</a>
-        <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="about.html">About</a>
-        <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="services.html">Services</a>
-        <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="blog.html">Insights</a>
-        <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="contact.html">Contact</a>
-        <a class="mt-2 inline-flex items-center justify-center rounded-full bg-foreorange px-4 py-2 font-semibold text-white"
-           href="https://wa.me/971505017340"
-           target="_blank"
-           rel="noopener">
-          WhatsApp Now
-        </a>
-      </div>
-    </div>
-  </header>
+<a href="index.html" class="flex items-center gap-3">
 
-  <main>
-    <section class="bg-gradient-to-b from-slate-50 via-white to-white">
-      <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
-        <div class="max-w-3xl">
-          <div class="text-xs font-semibold text-slate-500">Insights</div>
-          <h1 class="mt-2 text-4xl font-extrabold tracking-tight">Practical Thinking for Business Growth</h1>
-          <p class="mt-4 text-lg text-slate-600">
-            Actionable insights on strategy, CRM, data governance, performance systems, and business growth across the Middle East.
-          </p>
-        </div>
+<img src="Logo.svg" class="h-12 w-auto">
 
-        <!-- Dynamic blog posts -->
-        <div id="blogPosts" class="mt-10 grid gap-6 md:grid-cols-3"></div>
+</a>
 
-        <!-- Subscription CTA -->
-        <div class="mt-12 rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
-          <h2 class="text-2xl font-bold tracking-tight">Want weekly insights?</h2>
-          <p class="mt-2 text-sm text-slate-600">
-            Send us a message and we’ll share updates relevant to your industry.
-          </p>
-          <div class="mt-5 flex flex-col gap-3 sm:flex-row">
-            <a href="mailto:hello@forementor.com?subject=Subscribe%20to%20FOREMENTOR%20Insights"
-               class="inline-flex items-center justify-center rounded-full bg-foreblue px-6 py-3 text-sm font-semibold text-white shadow-soft hover:opacity-90">
-              Subscribe by Email
-            </a>
-            <a href="https://wa.me/971505017340"
-               target="_blank"
-               rel="noopener"
-               class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 hover:border-slate-300">
-              Subscribe via WhatsApp
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
+<nav class="hidden md:flex items-center gap-6 text-sm font-medium">
 
-  <!-- Footer -->
-  <footer class="border-t border-slate-200 bg-slate-50">
-    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-4">
-      <div>
-        <div class="flex items-center gap-3">
-          <img src="Logo.svg" alt="FOREMENTOR logo" class="h-12 w-auto" />
-        </div>
-        <p class="mt-4 text-sm text-slate-600">
-          We design intelligence & market architecture, execute with precision, and maintain for sustainable growth.
-        </p>
-      </div>
+<a href="index.html" class="hover:text-foreblue">Home</a>
+<a href="about.html" class="hover:text-foreblue">About</a>
+<a href="services.html" class="hover:text-foreblue">Services</a>
+<a href="blog.html" class="hover:text-foreblue">Insights</a>
+<a href="contact.html" class="hover:text-foreblue">Contact</a>
 
-      <div>
-        <div class="text-sm font-semibold text-slate-900">Quick Links</div>
-        <ul class="mt-3 space-y-2 text-sm">
-          <li><a class="text-slate-600 hover:text-foreblue" href="index.html">Home</a></li>
-          <li><a class="text-slate-600 hover:text-foreblue" href="about.html">About</a></li>
-          <li><a class="text-slate-600 hover:text-foreblue" href="services.html">Services</a></li>
-          <li><a class="text-slate-600 hover:text-foreblue" href="blog.html">Insights</a></li>
-          <li><a class="text-slate-600 hover:text-foreblue" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+</nav>
 
-      <div>
-        <div class="text-sm font-semibold text-slate-900">Services</div>
-        <ul class="mt-3 space-y-2 text-sm text-slate-600">
-          <li>Strategy & Market Structuring</li>
-          <li>Customer & Relationship Growth</li>
-          <li>Data & Intelligence Governance</li>
-          <li>Technology & Systems</li>
-          <li>Dashboards & KPI Monitoring</li>
-          <li>Campaign & Engagement</li>
-        </ul>
-      </div>
+<a href="https://wa.me/971505017340"
+class="hidden md:inline-flex rounded-full bg-foreorange px-4 py-2 text-sm font-semibold text-white">
 
-      <div>
-        <div class="text-sm font-semibold text-slate-900">Contact</div>
-        <div class="mt-3 space-y-2 text-sm text-slate-600">
-          <div><span class="font-medium text-slate-800">Phone:</span> <a class="hover:text-foreblue" href="tel:+971505017340">+971 50 501 7340</a></div>
-          <div><span class="font-medium text-slate-800">Email:</span> <a class="hover:text-foreblue" href="mailto:hello@forementor.com">hello@forementor.com</a></div>
-          <div><span class="font-medium text-slate-800">WhatsApp:</span> <a class="hover:text-foreblue" href="https://wa.me/971505017340" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
-        </div>
-      </div>
-    </div>
+WhatsApp Now
 
-    <div class="border-t border-slate-200">
-      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-slate-500 md:flex-row">
-        <div>© <span id="year"></span> forementor.com. All rights reserved.</div>
-        <div>Built for performance • Mobile-first • SEO-ready</div>
-      </div>
-    </div>
-  </footer>
+</a>
 
-  <!-- Menu + footer year -->
-  <script>
-    const btn = document.getElementById('menuBtn');
-    const menu = document.getElementById('mobileMenu');
+</div>
 
-    if (btn && menu) {
-      btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-      });
-    }
+</header>
 
-    const y = document.getElementById('year');
-    if (y) y.textContent = new Date().getFullYear();
-  </script>
 
-  <!-- Dynamic blog loader -->
-  <script>
-    async function loadPosts() {
-      try {
-        const response = await fetch('data/posts.json');
-        const posts = await response.json();
+<main>
 
-        const container = document.getElementById('blogPosts');
-        if (!container) return;
+<!-- HERO -->
 
-        container.innerHTML = posts.map(post => `
-          <article class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
-            <div class="text-xs font-semibold text-slate-500">${post.category}</div>
-            <h3 class="mt-2 text-lg font-bold tracking-tight">${post.title}</h3>
-            <div class="mt-1 text-xs text-slate-400">${post.date}</div>
-            <p class="mt-2 text-sm text-slate-600">${post.summary}</p>
-            <a class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-foreblue hover:opacity-90" href="${post.link}">
-              Read more <span aria-hidden="true">→</span>
-            </a>
-          </article>
-        `).join('');
-      } catch (error) {
-        console.error('Error loading posts:', error);
-      }
-    }
+<section class="bg-gradient-to-b from-slate-50 via-white to-white">
 
-    loadPosts();
-  </script>
+<div class="mx-auto max-w-7xl px-4 py-16">
+
+<div class="max-w-3xl">
+
+<div class="text-xs font-semibold text-slate-500">
+Thought Leadership
+</div>
+
+<h1 class="mt-2 text-4xl font-extrabold tracking-tight">
+FOREMENTOR Insights
+</h1>
+
+<p class="mt-4 text-lg text-slate-600">
+Strategic thinking, data intelligence, and growth frameworks
+for businesses operating across the Middle East.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FEATURED INSIGHT -->
+
+<section class="mx-auto max-w-7xl px-4">
+
+<div class="rounded-3xl border border-slate-200 shadow-soft overflow-hidden">
+
+<div class="grid md:grid-cols-2">
+
+<div class="p-8">
+
+<div class="text-xs font-semibold text-slate-500">
+Featured Insight
+</div>
+
+<h2 class="mt-2 text-3xl font-extrabold">
+
+The Future of Data-Driven Strategy in the GCC
+
+</h2>
+
+<p class="mt-4 text-slate-600">
+
+Many businesses invest in dashboards, CRM tools and AI systems before
+structuring their data foundations. This article explains how companies
+should build decision-ready data systems before scaling.
+
+</p>
+
+<a href="blog/gcc-data-strategy.html"
+class="mt-6 inline-flex text-sm font-semibold text-foreblue">
+
+Read the full insight →
+
+</a>
+
+</div>
+
+<div>
+
+<img src="assets/blog-feature.jpg"
+class="object-cover w-full h-full">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- TOPIC FILTERS -->
+
+<section class="mx-auto max-w-7xl px-4 mt-12">
+
+<div class="flex flex-wrap gap-3">
+
+<button class="px-4 py-2 text-sm rounded-full border border-slate-200 hover:bg-slate-100">
+
+Strategy
+
+</button>
+
+<button class="px-4 py-2 text-sm rounded-full border border-slate-200 hover:bg-slate-100">
+
+Customer Experience
+
+</button>
+
+<button class="px-4 py-2 text-sm rounded-full border border-slate-200 hover:bg-slate-100">
+
+Technology
+
+</button>
+
+<button class="px-4 py-2 text-sm rounded-full border border-slate-200 hover:bg-slate-100">
+
+Data & Analytics
+
+</button>
+
+<button class="px-4 py-2 text-sm rounded-full border border-slate-200 hover:bg-slate-100">
+
+Market Insights
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- LATEST INSIGHTS GRID -->
+
+<section class="mx-auto max-w-7xl px-4 py-12">
+
+<h2 class="text-2xl font-bold mb-8">
+
+Latest Insights
+
+</h2>
+
+<div id="blogPosts" class="grid gap-6 md:grid-cols-3"></div>
+
+</section>
+
+
+
+<!-- RESEARCH SECTION -->
+
+<section class="mx-auto max-w-7xl px-4">
+
+<div class="rounded-3xl bg-slate-50 p-10">
+
+<h2 class="text-2xl font-bold">
+
+FOREMENTOR Research
+
+</h2>
+
+<p class="mt-3 text-slate-600">
+
+Download our strategic research on business growth trends in the GCC.
+
+</p>
+
+<a href="reports/gcc-business-growth.pdf"
+class="mt-6 inline-flex px-6 py-3 bg-foreblue text-white rounded-full">
+
+Download Report
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- SUBSCRIBE CTA -->
+
+<section class="mx-auto max-w-7xl px-4 py-16 text-center">
+
+<h2 class="text-2xl font-bold">
+
+Receive FOREMENTOR Insights
+
+</h2>
+
+<p class="mt-3 text-slate-600">
+
+Get strategic insights delivered directly to your inbox.
+
+</p>
+
+<div class="mt-6 flex justify-center gap-4">
+
+<a href="mailto:hello@forementor.com"
+class="px-6 py-3 rounded-full bg-foreblue text-white">
+
+Subscribe by Email
+
+</a>
+
+<a href="https://wa.me/971505017340"
+class="px-6 py-3 rounded-full border border-slate-300">
+
+Subscribe via WhatsApp
+
+</a>
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- FOOTER -->
+
+<footer class="border-t border-slate-200 bg-slate-50">
+
+<div class="mx-auto max-w-7xl px-4 py-10 text-sm text-slate-500">
+
+© <span id="year"></span> forementor.com
+
+</div>
+
+</footer>
+
+
+
+<!-- MENU + YEAR -->
+
+<script>
+
+const y = document.getElementById('year');
+
+if (y) y.textContent = new Date().getFullYear();
+
+</script>
+
+
+
+<!-- LOAD POSTS FROM JSON -->
+
+<script>
+
+async function loadPosts() {
+
+try {
+
+const response = await fetch('data/posts.json');
+
+const posts = await response.json();
+
+const container = document.getElementById('blogPosts');
+
+container.innerHTML = posts.map(post => `
+
+<article class="rounded-3xl border border-slate-200 bg-white shadow-soft overflow-hidden">
+
+<img src="assets/blog1.jpg" class="w-full h-44 object-cover">
+
+<div class="p-6">
+
+<div class="text-xs font-semibold text-slate-500">
+
+${post.category}
+
+</div>
+
+<h3 class="mt-2 text-lg font-bold">
+
+${post.title}
+
+</h3>
+
+<p class="mt-2 text-sm text-slate-600">
+
+${post.summary}
+
+</p>
+
+<a href="${post.link}"
+class="mt-4 inline-flex text-sm font-semibold text-foreblue">
+
+Read insight →
+
+</a>
+
+</div>
+
+</article>
+
+`).join('');
+
+}
+
+catch(error){
+
+console.error("Error loading posts:",error);
+
+}
+
+}
+
+loadPosts();
+
+</script>
 
 </body>
 </html>
