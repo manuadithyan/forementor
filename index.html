@@ -1,222 +1,519 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>FOREMENTOR | Strategic Business Growth Partner</title>
-
-<meta name="description"
-content="FOREMENTOR helps businesses across the Middle East design strategy, implement systems, and optimize performance through intelligence-led growth." />
-
-<script src="https://cdn.tailwindcss.com"></script>
-
-<script>
-tailwind.config = {
-theme: {
-extend: {
-colors: {
-foreblue: '#1E63B5',
-foreorange: '#F58220'
-},
-boxShadow: {
-soft: '0 10px 30px rgba(2,6,23,0.08)'
-}
-}
-}
-}
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FOREMENTOR | Strategic Business Growth Partner</title>
+  <meta name="description" content="FOREMENTOR helps businesses across the Middle East design strategy, implement systems, and optimize performance through intelligence-led growth." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            foreblue: '#1E63B5',
+            foreorange: '#F58220',
+          },
+          boxShadow: {
+            soft: '0 10px 30px rgba(2,6,23,0.08)',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-
 <body class="bg-white text-slate-900">
 
-<!-- HEADER -->
-
-<header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
-
-<div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
-
-<a href="index.html" class="flex items-center gap-3">
-<img src="Logo.svg" alt="FOREMENTOR logo" class="h-12 w-auto scale-125 origin-left"/>
-</a>
-
-<nav class="hidden items-center gap-6 text-sm font-medium md:flex">
-<a class="hover:text-foreblue" href="index.html">Home</a>
-<a class="hover:text-foreblue" href="about.html">About</a>
-<a class="hover:text-foreblue" href="services.html">Services</a>
-<a class="hover:text-foreblue" href="industries.html">Industries</a>
-<a class="hover:text-foreblue" href="blog.html">Insights</a>
-<a class="hover:text-foreblue" href="contact.html">Contact</a>
-</nav>
-
-<a href="contact.html#consult"
-class="hidden rounded-full bg-foreorange px-4 py-2 text-sm font-semibold text-white shadow-soft md:inline-flex">
-Book Consultation
-</a>
-
-</div>
-
-</header>
-
-
-
-<main>
-
-<!-- HERO -->
-
-<section class="bg-gradient-to-b from-slate-50 via-white to-white">
-
-<div class="mx-auto max-w-7xl px-4 py-16">
-
-<h1 class="text-4xl font-extrabold tracking-tight md:text-6xl">
-Strategic Growth Starts with <span class="text-foreblue">Intelligence</span>
-</h1>
-
-<p class="mt-5 max-w-2xl text-lg text-slate-600">
-FOREMENTOR helps businesses design strategy, implement systems, and optimize performance.
-</p>
-
-<div class="mt-8 flex gap-4">
-
-<a href="contact.html"
-class="px-6 py-3 rounded-full bg-foreblue text-white">
-Request Business Assessment
-</a>
-
-<a href="https://wa.me/971505017340"
-class="px-6 py-3 rounded-full border border-slate-300">
-WhatsApp Now
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- LATEST INSIGHTS -->
-
-<section class="border-t border-slate-100 bg-white">
-
-<div class="mx-auto max-w-7xl px-4 py-14">
-
-<div class="flex items-end justify-between">
-
-<div>
-
-<div class="text-xs font-semibold text-slate-500">
-Thought Leadership
-</div>
-
-<h2 class="mt-2 text-3xl font-extrabold">
-Latest Insights
-</h2>
-
-<p class="mt-3 max-w-2xl text-slate-600">
-Practical thinking on strategy, customer systems, data governance, and execution excellence.
-</p>
-
-</div>
-
-<a href="blog.html"
-class="text-sm font-semibold text-foreblue">
-See all insights →
-</a>
-
-</div>
-
-<div id="homeBlogPosts" class="mt-10 grid gap-6 md:grid-cols-3"></div>
-
-</div>
-
-</section>
-
-</main>
-
-
-
-<!-- FOOTER -->
-
-<footer class="border-t border-slate-200 bg-slate-50">
-
-<div class="mx-auto max-w-7xl px-4 py-8 text-sm text-slate-500">
-
-© <span id="year"></span> forementor.com
-
-</div>
-
-</footer>
-
-
-
-<!-- YEAR -->
-
-<script>
-const y=document.getElementById('year');
-if(y) y.textContent=new Date().getFullYear();
-</script>
-
-
-
-<!-- LOAD POSTS -->
-
-<script>
-
-async function loadHomePosts(){
-
-try{
-
-const response = await fetch('data/posts.json');
-const posts = await response.json();
-
-const latestPosts = posts.slice(0,3);
-const container = document.getElementById('homeBlogPosts');
-
-container.innerHTML = latestPosts.map(post => `
-
-<article class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-soft">
-
-<img src="${post.image}" alt="${post.title}" class="h-44 w-full object-cover">
-
-<div class="p-6">
-
-<div class="text-xs font-semibold text-slate-500">
-${post.category}
-</div>
-
-<h3 class="mt-2 text-lg font-bold">
-${post.title}
-</h3>
-
-<p class="mt-2 text-sm text-slate-600">
-${post.summary}
-</p>
-
-<a href="${post.link}"
-class="mt-4 inline-flex text-sm font-semibold text-foreblue">
-Read insight →
-</a>
-
-</div>
-
-</article>
-
-`).join('');
-
-}
-
-catch(err){
-
-console.error("Error loading posts:",err);
-
-}
-
-}
-
-loadHomePosts();
-
-</script>
+  <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
+    <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="Logo.svg" alt="FOREMENTOR logo" class="h-12 w-auto scale-125 origin-left" />
+      </a>
+
+      <nav class="hidden items-center gap-6 text-sm font-medium md:flex">
+        <a class="hover:text-foreblue" href="index.html">Home</a>
+        <a class="hover:text-foreblue" href="about.html">About</a>
+        <a class="hover:text-foreblue" href="services.html">Services</a>
+        <a class="hover:text-foreblue" href="industries.html">Industries</a>
+        <a class="hover:text-foreblue" href="blog.html">Insights</a>
+        <a class="hover:text-foreblue" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-2">
+        <a href="contact.html#consult"
+           class="hidden rounded-full bg-foreorange px-4 py-2 text-sm font-semibold text-white shadow-soft hover:opacity-90 md:inline-flex">
+          Book Consultation
+        </a>
+
+        <button id="menuBtn" class="inline-flex rounded-xl border border-slate-200 p-2 md:hidden" aria-label="Open menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white md:hidden">
+      <div class="mx-auto grid max-w-7xl gap-1 px-4 py-3 text-sm font-medium">
+        <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="index.html">Home</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="about.html">About</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="services.html">Services</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="industries.html">Industries</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="blog.html">Insights</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="contact.html">Contact</a>
+        <a class="mt-2 inline-flex items-center justify-center rounded-full bg-foreorange px-4 py-2 font-semibold text-white"
+           href="contact.html#consult">
+          Book Consultation
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-white">
+      <div class="pointer-events-none absolute -left-16 top-0 h-64 w-64 rounded-full bg-foreblue/10 blur-3xl"></div>
+      <div class="pointer-events-none absolute -right-16 top-10 h-64 w-64 rounded-full bg-foreorange/10 blur-3xl"></div>
+
+      <div class="mx-auto grid max-w-7xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
+            <span class="h-2 w-2 rounded-full bg-foreorange"></span>
+            Strategic Growth Partner for Businesses in the Middle East
+          </div>
+
+          <h1 class="mt-5 text-4xl font-extrabold tracking-tight md:text-6xl">
+            Strategic Growth Starts with <span class="text-foreblue">Intelligence</span>
+          </h1>
+
+          <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+            FOREMENTOR helps businesses design strategy, implement systems, and optimize performance through intelligence-led frameworks, operational discipline, and measurable execution.
+          </p>
+
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="contact.html#consult"
+               class="inline-flex items-center justify-center rounded-full bg-foreblue px-6 py-3 text-sm font-semibold text-white shadow-soft hover:opacity-90">
+              Request Business Assessment
+            </a>
+            <a href="https://wa.me/971505017340"
+               target="_blank"
+               rel="noopener"
+               class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 hover:border-slate-300">
+              WhatsApp Now
+            </a>
+          </div>
+
+          <div class="mt-10 grid grid-cols-3 gap-4">
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 text-center shadow-soft">
+              <div class="text-2xl font-extrabold">Strategy</div>
+              <div class="mt-1 text-xs text-slate-500">Design & positioning</div>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 text-center shadow-soft">
+              <div class="text-2xl font-extrabold">Execution</div>
+              <div class="mt-1 text-xs text-slate-500">Systems & implementation</div>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-white p-4 text-center shadow-soft">
+              <div class="text-2xl font-extrabold">Optimization</div>
+              <div class="mt-1 text-xs text-slate-500">Continuous improvement</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative">
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="flex items-center justify-between">
+              <div class="text-sm font-semibold text-slate-900">Executive Performance View</div>
+              <div class="text-xs text-slate-500">Illustrative dashboard</div>
+            </div>
+
+            <div class="mt-6 grid gap-4">
+              <div class="rounded-2xl bg-slate-50 p-4">
+                <div class="flex items-center justify-between">
+                  <div class="text-xs font-semibold text-slate-600">Growth Readiness</div>
+                  <div class="text-xs font-semibold text-foreblue">High Potential</div>
+                </div>
+                <div class="mt-3 h-2 w-full overflow-hidden rounded-full bg-slate-200">
+                  <div class="h-full w-3/4 rounded-full bg-foreblue"></div>
+                </div>
+              </div>
+
+              <div class="rounded-2xl bg-slate-50 p-4">
+                <div class="flex items-center justify-between">
+                  <div class="text-xs font-semibold text-slate-600">Operational Visibility</div>
+                  <div class="text-xs font-semibold text-foreorange">Improving</div>
+                </div>
+                <div class="mt-3 h-2 w-full overflow-hidden rounded-full bg-slate-200">
+                  <div class="h-full w-2/3 rounded-full bg-foreorange"></div>
+                </div>
+              </div>
+
+              <div class="rounded-2xl bg-slate-50 p-4">
+                <div class="flex items-center justify-between">
+                  <div class="text-xs font-semibold text-slate-600">Customer Lifecycle Control</div>
+                  <div class="text-xs font-semibold text-slate-900">Structured</div>
+                </div>
+                <div class="mt-4 grid grid-cols-12 gap-1">
+                  <div class="col-span-2 h-10 rounded-xl bg-foreblue/15"></div>
+                  <div class="col-span-3 h-10 rounded-xl bg-foreblue/25"></div>
+                  <div class="col-span-3 h-10 rounded-xl bg-foreblue/35"></div>
+                  <div class="col-span-4 h-10 rounded-xl bg-foreblue/45"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-6 rounded-2xl bg-gradient-to-r from-foreblue to-foreorange p-5 text-white">
+              <div class="text-sm font-semibold">FOREMENTOR</div>
+              <div class="mt-1 text-xs opacity-90">
+                We design intelligence. We execute with precision. We maintain for sustainable growth.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-slate-100 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
+        <div class="max-w-3xl">
+          <div class="text-xs font-semibold text-slate-500">Strategic Positioning</div>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight">A Growth Partner, Not Just a Service Provider</h2>
+          <p class="mt-4 text-lg text-slate-600">
+            FOREMENTOR bridges strategy, systems, and execution. We help organizations structure their business models, strengthen customer lifecycle design, implement technology frameworks, and create visibility through dashboards and governance.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <div class="text-lg font-bold tracking-tight">Intelligence-Led Strategy</div>
+            <p class="mt-2 text-sm text-slate-600">
+              Business model design, segmentation, growth pathways, and market architecture built on structured business intelligence.
+            </p>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <div class="text-lg font-bold tracking-tight">Execution Capability</div>
+            <p class="mt-2 text-sm text-slate-600">
+              CRM, ERP, automation, operational systems, dashboards, and engagement frameworks that turn plans into action.
+            </p>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <div class="text-lg font-bold tracking-tight">Sustainable Improvement</div>
+            <p class="mt-2 text-sm text-slate-600">
+              Ongoing audits, optimization, KPI alignment, and performance reviews to sustain measurable growth over time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-slate-100 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <div class="text-xs font-semibold text-slate-500">Services</div>
+            <h2 class="mt-2 text-3xl font-extrabold tracking-tight">Advisory and Execution Services for Growth</h2>
+            <p class="mt-3 max-w-2xl text-slate-600">
+              From business structuring to systems implementation and performance monitoring, FOREMENTOR supports the full growth journey.
+            </p>
+          </div>
+          <a href="services.html"
+             class="inline-flex items-center justify-center rounded-full bg-foreblue px-5 py-2.5 text-sm font-semibold text-white shadow-soft hover:opacity-90">
+            Explore Services
+          </a>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="text-lg font-bold tracking-tight">Strategic & Market Structuring</div>
+            <p class="mt-2 text-sm text-slate-600">Business model architecture, growth strategy, segmentation, and market entry readiness.</p>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="text-lg font-bold tracking-tight">Customer & CRM Lifecycle Design</div>
+            <p class="mt-2 text-sm text-slate-600">Customer journey mapping, lead lifecycle systems, retention strategy, and engagement architecture.</p>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="text-lg font-bold tracking-tight">Data & Governance Frameworks</div>
+            <p class="mt-2 text-sm text-slate-600">Data strategy, KPI engineering, analytics frameworks, and decision-support architecture.</p>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="text-lg font-bold tracking-tight">Technology & Systems Implementation</div>
+            <p class="mt-2 text-sm text-slate-600">CRM, ERP, automation tools, AI-enabled workflows, and business platform integration.</p>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="text-lg font-bold tracking-tight">Dashboard & Performance Monitoring</div>
+            <p class="mt-2 text-sm text-slate-600">Executive dashboards, operational tracking, reporting systems, and performance visibility.</p>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="text-lg font-bold tracking-tight">Continuous Improvement Programs</div>
+            <p class="mt-2 text-sm text-slate-600">Audits, process optimization, gap analysis, staff alignment, and quarterly strategy reviews.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-slate-100 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
+        <div class="flex flex-col gap-3">
+          <div class="text-xs font-semibold text-slate-500">Industry Focus</div>
+          <h2 class="text-3xl font-extrabold tracking-tight">Industry Perspective Matters</h2>
+          <p class="max-w-2xl text-slate-600">
+            Our approach adapts strategic frameworks to sector realities, operational maturity, and customer dynamics.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="rounded-2xl border border-slate-200 bg-white p-5"><div class="text-sm font-semibold text-slate-900">Technology</div></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5"><div class="text-sm font-semibold text-slate-900">Healthcare</div></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5"><div class="text-sm font-semibold text-slate-900">Financial Services</div></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5"><div class="text-sm font-semibold text-slate-900">Retail</div></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5"><div class="text-sm font-semibold text-slate-900">Manufacturing</div></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5"><div class="text-sm font-semibold text-slate-900">Professional Services</div></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5"><div class="text-sm font-semibold text-slate-900">Real Estate</div></div>
+          <div class="rounded-2xl border border-slate-200 bg-white p-5"><div class="text-sm font-semibold text-slate-900">Logistics</div></div>
+        </div>
+
+        <div class="mt-8">
+          <a href="industries.html" class="inline-flex items-center gap-2 text-sm font-semibold text-foreblue hover:opacity-90">
+            View industry perspectives →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-slate-100 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
+        <div class="grid overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-soft md:grid-cols-2">
+          <div class="p-8 md:p-10">
+            <div class="text-xs font-semibold text-slate-500">Featured Insight</div>
+            <h2 class="mt-2 text-3xl font-extrabold tracking-tight">
+              The Future of Data-Driven Strategy in the GCC
+            </h2>
+            <p class="mt-4 text-slate-600">
+              Many businesses invest in dashboards, CRM platforms, and automation before structuring the intelligence behind them. This insight explores how organizations can build decision-ready systems before scaling.
+            </p>
+            <a href="blog/gcc-data-strategy.html"
+               class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-foreblue hover:opacity-90">
+              Read featured insight →
+            </a>
+          </div>
+          <div class="min-h-[280px] bg-slate-100">
+            <img src="assets/blog-feature.jpg" alt="Featured insight" class="h-full w-full object-cover">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-slate-100 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
+        <div class="flex items-end justify-between gap-6">
+          <div>
+            <div class="text-xs font-semibold text-slate-500">Thought Leadership</div>
+            <h2 class="mt-2 text-3xl font-extrabold tracking-tight">Latest Insights</h2>
+            <p class="mt-3 max-w-2xl text-slate-600">
+              Practical thinking on strategy, customer systems, data governance, and execution excellence.
+            </p>
+          </div>
+          <a href="blog.html" class="hidden text-sm font-semibold text-foreblue hover:opacity-90 md:inline-flex">
+            See all insights →
+          </a>
+        </div>
+
+        <div id="homeBlogPosts" class="mt-10 grid gap-6 md:grid-cols-3"></div>
+
+        <div class="mt-8 md:hidden">
+          <a href="blog.html" class="text-sm font-semibold text-foreblue hover:opacity-90">
+            See all insights →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-slate-100 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
+        <div class="flex flex-col gap-3">
+          <div class="text-xs font-semibold text-slate-500">Case Studies</div>
+          <h2 class="text-3xl font-extrabold tracking-tight">How Strategy Translates into Results</h2>
+          <p class="max-w-2xl text-slate-600">
+            Showcasing how structured thinking, operational design, and system implementation drive measurable business outcomes.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="text-xs font-semibold text-slate-500">Retail Transformation</div>
+            <h3 class="mt-2 text-lg font-bold tracking-tight">Improving Sales Visibility and Customer Retention</h3>
+            <p class="mt-3 text-sm text-slate-600">CRM lifecycle design, engagement workflow, and reporting structure aligned for growth.</p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="text-xs font-semibold text-slate-500">SME Performance Enablement</div>
+            <h3 class="mt-2 text-lg font-bold tracking-tight">Building KPI Visibility for Better Decisions</h3>
+            <p class="mt-3 text-sm text-slate-600">Dashboard architecture and governance systems designed to improve management control.</p>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-white p-6 shadow-soft">
+            <div class="text-xs font-semibold text-slate-500">Market Growth Strategy</div>
+            <h3 class="mt-2 text-lg font-bold tracking-tight">Structuring Expansion Readiness in the GCC</h3>
+            <p class="mt-3 text-sm text-slate-600">Market positioning, process alignment, and customer lifecycle readiness for expansion.</p>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <a href="case-studies.html" class="inline-flex items-center gap-2 text-sm font-semibold text-foreblue hover:opacity-90">
+            View case studies →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-slate-100 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
+        <div class="grid gap-8 md:grid-cols-2 md:items-center">
+          <div>
+            <div class="text-xs font-semibold text-slate-500">Leadership</div>
+            <h2 class="mt-2 text-3xl font-extrabold tracking-tight">Leadership Perspective that Connects Strategy and Execution</h2>
+            <p class="mt-4 text-slate-600">
+              FOREMENTOR’s advisory perspective is built around the realities of growth, operational complexity, and customer-centered performance. The goal is not just ideas, but structured execution.
+            </p>
+            <a href="leadership.html" class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-foreblue hover:opacity-90">
+              View leadership profile →
+            </a>
+          </div>
+
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-8">
+            <div class="text-lg font-bold tracking-tight">Manu Adithyan</div>
+            <div class="mt-1 text-sm font-medium text-slate-500">Managing Director – FOREMENTOR</div>
+            <p class="mt-4 text-sm leading-7 text-slate-600">
+              Strategic advisor focused on business growth architecture, customer lifecycle systems, performance governance, and operational enablement for businesses across the Middle East.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t border-slate-100 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
+        <div class="rounded-3xl bg-gradient-to-r from-foreblue to-foreorange p-8 text-white shadow-soft md:p-12">
+          <div class="grid gap-8 md:grid-cols-2 md:items-center">
+            <div>
+              <h2 class="text-3xl font-extrabold tracking-tight">Ready to Build Your Growth Roadmap?</h2>
+              <p class="mt-3 text-white/90">
+                Start with a structured conversation on strategy, systems, and performance priorities tailored to your business.
+              </p>
+            </div>
+            <div class="flex flex-col gap-3 sm:flex-row sm:justify-end">
+              <a href="contact.html#consult"
+                 class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 hover:opacity-95">
+                Request Business Assessment
+              </a>
+              <a href="https://wa.me/971505017340"
+                 target="_blank"
+                 rel="noopener"
+                 class="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white hover:bg-white/15">
+                WhatsApp Now
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-slate-200 bg-slate-50">
+    <div class="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-4">
+      <div>
+        <img src="Logo.svg" alt="FOREMENTOR logo" class="h-12 w-auto" />
+        <p class="mt-4 text-sm text-slate-600">
+          We design intelligence & market architecture, execute with precision, and maintain for sustainable growth.
+        </p>
+      </div>
+
+      <div>
+        <div class="text-sm font-semibold text-slate-900">Quick Links</div>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a class="text-slate-600 hover:text-foreblue" href="index.html">Home</a></li>
+          <li><a class="text-slate-600 hover:text-foreblue" href="about.html">About</a></li>
+          <li><a class="text-slate-600 hover:text-foreblue" href="services.html">Services</a></li>
+          <li><a class="text-slate-600 hover:text-foreblue" href="industries.html">Industries</a></li>
+          <li><a class="text-slate-600 hover:text-foreblue" href="blog.html">Insights</a></li>
+          <li><a class="text-slate-600 hover:text-foreblue" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="text-sm font-semibold text-slate-900">Focus Areas</div>
+        <ul class="mt-3 space-y-2 text-sm text-slate-600">
+          <li>Growth Strategy</li>
+          <li>CRM & Customer Lifecycle</li>
+          <li>Data Governance</li>
+          <li>Technology Enablement</li>
+          <li>Performance Management</li>
+          <li>Continuous Improvement</li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="text-sm font-semibold text-slate-900">Contact</div>
+        <div class="mt-3 space-y-2 text-sm text-slate-600">
+          <div><span class="font-medium text-slate-800">Phone:</span> <a href="tel:+971505017340" class="hover:text-foreblue">+971 50 501 7340</a></div>
+          <div><span class="font-medium text-slate-800">Email:</span> <a href="mailto:hello@forementor.com" class="hover:text-foreblue">hello@forementor.com</a></div>
+          <div><span class="font-medium text-slate-800">WhatsApp:</span> <a href="https://wa.me/971505017340" target="_blank" rel="noopener" class="hover:text-foreblue">Chat on WhatsApp</a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="border-t border-slate-200">
+      <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-slate-500 md:flex-row">
+        <div>© <span id="year"></span> forementor.com. All rights reserved.</div>
+        <div>Strategic advisory • Systems implementation • Performance optimization</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    async function loadHomePosts() {
+      try {
+        const response = await fetch('data/posts.json');
+        const posts = await response.json();
+        const latestPosts = posts.slice(0, 3);
+        const container = document.getElementById('homeBlogPosts');
+
+        if (!container) return;
+
+        container.innerHTML = latestPosts.map(post => `
+          <article class="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-soft">
+            <img src="${post.image}" alt="${post.title}" class="h-44 w-full object-cover">
+            <div class="p-6">
+              <div class="text-xs font-semibold text-slate-500">${post.category}</div>
+              <h3 class="mt-2 text-lg font-bold tracking-tight">${post.title}</h3>
+              <p class="mt-2 text-sm text-slate-600">${post.summary}</p>
+              <a href="${post.link}" class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-foreblue hover:opacity-90">
+                Read insight →
+              </a>
+            </div>
+          </article>
+        `).join('');
+      } catch (error) {
+        console.error('Error loading home posts:', error);
+      }
+    }
+
+    loadHomePosts();
+  </script>
 
 </body>
 </html>
