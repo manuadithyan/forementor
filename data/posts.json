@@ -4,6 +4,7 @@
     "date": "2026-03-09",
     "summary": "A simple framework to make data usable and decisions consistent before adding tools.",
     "category": "Insight",
+    "image": "assets/blog1.jpg",
     "link": "blog/data-strategy.html"
   },
   {
@@ -11,6 +12,7 @@
     "date": "2026-03-09",
     "summary": "How to design lead-to-loyalty flows that improve conversion and retention.",
     "category": "Insight",
+    "image": "assets/blog2.jpg",
     "link": "blog/crm-growth.html"
   },
   {
@@ -18,6 +20,7 @@
     "date": "2026-03-09",
     "summary": "Positioning, compliance planning, and KPI visibility before expansion.",
     "category": "Insight",
+    "image": "assets/blog3.jpg",
     "link": "blog/gcc-market-entry.html"
   }
 ]
