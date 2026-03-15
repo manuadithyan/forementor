@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services — FOREMENTOR</title>
-  <meta name="description" content="Explore FOREMENTOR services: strategy, data governance, technology implementation, dashboards, campaigns, and continuous improvement.">
+  <title>Services | FOREMENTOR</title>
+  <meta name="description" content="Explore FOREMENTOR services across strategy, AI automation, ERP solutions, data analytics, marketing automation, customer care, campaign management, market intelligence, CFO services, and managed operations support." />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -13,9 +13,11 @@
           colors: {
             foreblue: '#1E63B5',
             foreorange: '#F58220',
+            foregreen: '#7BAE43',
           },
           boxShadow: {
             soft: '0 10px 30px rgba(2, 6, 23, 0.08)',
+            card: '0 14px 40px rgba(15, 23, 42, 0.08)',
           }
         }
       }
@@ -23,7 +25,7 @@
   </script>
 </head>
 <body class="bg-white text-slate-900">
-  <!-- Top bar -->
+
   <header class="sticky top-0 z-50 border-b border-slate-200 bg-white/90 backdrop-blur">
     <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3">
       <a href="index.html" class="flex items-center gap-3">
@@ -33,16 +35,19 @@
       <nav class="hidden items-center gap-6 text-sm font-medium md:flex">
         <a class="hover:text-foreblue" href="index.html">Home</a>
         <a class="hover:text-foreblue" href="about.html">About</a>
-        <a class="hover:text-foreblue" href="services.html">Services</a>
+        <a class="text-foreblue" href="services.html">Services</a>
+        <a class="hover:text-foreblue" href="industries.html">Industries</a>
+        <a class="hover:text-foreblue" href="methodology.html">Methodology</a>
         <a class="hover:text-foreblue" href="blog.html">Insights</a>
         <a class="hover:text-foreblue" href="contact.html">Contact</a>
       </nav>
 
       <div class="flex items-center gap-2">
-        <a href="contact.html#whatsapp"
+        <a href="contact.html#consult"
            class="hidden rounded-full bg-foreorange px-4 py-2 text-sm font-semibold text-white shadow-soft hover:opacity-90 md:inline-flex">
-           WhatsApp Now
+          Book Consultation
         </a>
+
         <button id="menuBtn" class="inline-flex rounded-xl border border-slate-200 p-2 md:hidden" aria-label="Open menu">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
@@ -51,111 +56,457 @@
       </div>
     </div>
 
-    <!-- Mobile menu -->
     <div id="mobileMenu" class="hidden border-t border-slate-200 bg-white md:hidden">
       <div class="mx-auto grid max-w-7xl gap-1 px-4 py-3 text-sm font-medium">
         <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="index.html">Home</a>
         <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="about.html">About</a>
-        <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="services.html">Services</a>
+        <a class="rounded-lg bg-slate-50 px-3 py-2 text-foreblue" href="services.html">Services</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="industries.html">Industries</a>
+        <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="methodology.html">Methodology</a>
         <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="blog.html">Insights</a>
         <a class="rounded-lg px-3 py-2 hover:bg-slate-50" href="contact.html">Contact</a>
         <a class="mt-2 inline-flex items-center justify-center rounded-full bg-foreorange px-4 py-2 font-semibold text-white"
-           href="contact.html#whatsapp">WhatsApp Now</a>
+           href="contact.html#consult">
+          Book Consultation
+        </a>
       </div>
     </div>
   </header>
 
-<main>
-  <section class="bg-gradient-to-b from-slate-50 via-white to-white">
-    <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
-      <div class="max-w-3xl">
-        <div class="text-xs font-semibold text-slate-500">Services</div>
-        <h1 class="mt-2 text-4xl font-extrabold tracking-tight">Structured Services for Sustainable Growth</h1>
-        <p class="mt-4 text-lg text-slate-600">
-          Advisory + execution services designed to build the frameworks, systems, and performance visibility your business needs.
-        </p>
-      </div>
+  <main>
 
-      <div class="mt-10 grid gap-6 md:grid-cols-2">
-        <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
-          <h2 class="text-2xl font-bold tracking-tight">1) Strategic & Market Structuring Advisory</h2>
-          <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-600">
-            <li>Enterprise strategy blueprinting</li>
-            <li>Business model architecture</li>
-            <li>Target market definition & segmentation</li>
-            <li>CRM & customer lifecycle strategy</li>
-            <li>Growth levers & scalability pathways</li>
-            <li>Market entry & expansion framework</li>
-          </ul>
-        </div>
+    <!-- HERO -->
+    <section class="relative overflow-hidden bg-gradient-to-b from-slate-50 via-white to-white">
+      <div class="pointer-events-none absolute -left-16 top-0 h-72 w-72 rounded-full bg-foreblue/10 blur-3xl"></div>
+      <div class="pointer-events-none absolute -right-16 top-10 h-72 w-72 rounded-full bg-foreorange/10 blur-3xl"></div>
 
-        <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
-          <h2 class="text-2xl font-bold tracking-tight">2) Relationship & Customer-Driven Growth Design</h2>
-          <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-600">
-            <li>Customer experience & journey framework</li>
-            <li>Lead lifecycle engineering</li>
-            <li>Loyalty & retention strategy systems</li>
-            <li>Interaction mapping & personalization roadmap</li>
-            <li>Data-backed engagement architecture</li>
-          </ul>
-        </div>
-
-        <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
-          <h2 class="text-2xl font-bold tracking-tight">3) Data & Insight Governance</h2>
-          <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-600">
-            <li>Data strategy & architecture design</li>
-            <li>KPI & performance metric engineering</li>
-            <li>Analytics framework definition</li>
-            <li>Data quality & governance blueprint</li>
-            <li>Competitive intelligence design</li>
-          </ul>
-        </div>
-
-        <div class="rounded-3xl border border-slate-200 bg-white p-8 shadow-soft">
-          <h2 class="text-2xl font-bold tracking-tight">4) Implementing & Maintaining Excellence</h2>
-          <p class="mt-3 text-sm text-slate-600">
-            We deploy systems, automation, analytics, engagement platforms, and performance monitoring that deliver measurable outcomes.
-          </p>
-          <ul class="mt-4 list-disc space-y-2 pl-5 text-sm text-slate-600">
-            <li>CRM deployment & integration</li>
-            <li>ERP & operations systems support</li>
-            <li>AI-enabled tools integration</li>
-            <li>Dashboards & real-time KPI tracking</li>
-            <li>Campaign execution & lead nurturing</li>
-            <li>Operational SOPs, HR & compliance support</li>
-            <li>Performance audits & continuous improvement</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="mt-12 rounded-3xl bg-gradient-to-r from-foreblue to-foreorange p-8 text-white shadow-soft md:p-10">
-        <div class="grid gap-6 md:grid-cols-2 md:items-center">
+      <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
+        <div class="grid items-center gap-10 md:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <h3 class="text-2xl font-extrabold tracking-tight">Not sure where to start?</h3>
-            <p class="mt-2 text-white/90">Request a short assessment and we’ll recommend a structured roadmap.</p>
+            <div class="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
+              <span class="h-2 w-2 rounded-full bg-foreorange"></span>
+              FOREMENTOR Service Architecture
+            </div>
+
+            <h1 class="mt-5 text-4xl font-extrabold tracking-tight md:text-5xl">
+              AI-Driven Business Intelligence, Intelligent Systems & <span class="text-foreblue">Performance Transformation</span>
+            </h1>
+
+            <p class="mt-5 max-w-3xl text-lg leading-8 text-slate-600">
+              Forementor helps organizations design strategy, implement intelligent systems, and optimize business performance through AI, automation, analytics, customer systems, finance support, and managed operations.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="contact.html#consult"
+                 class="inline-flex items-center justify-center rounded-full bg-foreblue px-6 py-3 text-sm font-semibold text-white shadow-soft hover:opacity-90">
+                Request Business Assessment
+              </a>
+              <a href="https://wa.me/971542800300"
+                 target="_blank"
+                 rel="noopener"
+                 class="inline-flex items-center justify-center rounded-full border border-slate-200 bg-white px-6 py-3 text-sm font-semibold text-slate-800 hover:border-slate-300">
+                WhatsApp Now
+              </a>
+            </div>
+
+            <div class="mt-8 grid gap-4 sm:grid-cols-3">
+              <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-soft">
+                <div class="text-sm font-semibold text-foreorange">Strategy</div>
+                <div class="mt-1 text-sm text-slate-600">Roadmaps, transformation priorities, market entry, and operating model design.</div>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-soft">
+                <div class="text-sm font-semibold text-foreblue">Implementation</div>
+                <div class="mt-1 text-sm text-slate-600">Systems deployment, ERP, automation, dashboards, and customer platforms.</div>
+              </div>
+              <div class="rounded-2xl border border-slate-200 bg-white p-4 shadow-soft">
+                <div class="text-sm font-semibold text-foregreen">Operations</div>
+                <div class="mt-1 text-sm text-slate-600">Performance reporting, CFO services, optimization, and managed support.</div>
+              </div>
+            </div>
           </div>
-          <div class="flex flex-col gap-3 sm:flex-row sm:justify-end">
-            <a href="contact.html#consult" class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 hover:opacity-95">
-              Request Assessment
-            </a>
-            <a href="https://wa.me/971505017340" target="_blank" rel="noopener"
-               class="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white hover:bg-white/15">
-              WhatsApp Now
-            </a>
+
+          <div>
+            <div class="overflow-hidden rounded-[2rem] border border-slate-200 bg-white shadow-card">
+              <img src="forementor framework.png" alt="FOREMENTOR Intelligent Enterprise Model" class="h-full w-full object-cover" />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+
+    <!-- INTRO -->
+    <section class="border-t border-slate-100 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
+        <div class="max-w-4xl">
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-500">How We Work</div>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight">A Full-Spectrum Transformation Partner</h2>
+          <p class="mt-4 text-lg text-slate-600">
+            Forementor is not just a service provider. We act as a business intelligence and transformation partner that supports enterprises across three critical dimensions: strategy, implementation, and intelligence-led operations.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-3">
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <div class="text-lg font-bold tracking-tight">Strategy</div>
+            <p class="mt-2 text-sm text-slate-600">
+              Designing growth roadmaps, operating models, market approaches, and intelligence-led transformation priorities.
+            </p>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <div class="text-lg font-bold tracking-tight">Implementation</div>
+            <p class="mt-2 text-sm text-slate-600">
+              Deploying systems, automation workflows, dashboards, and customer platforms required to operationalize strategy.
+            </p>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <div class="text-lg font-bold tracking-tight">Intelligence & Operations</div>
+            <p class="mt-2 text-sm text-slate-600">
+              Supporting business performance through analytics, reporting, CFO services, managed operations, and continuous optimization.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES GRID -->
+    <section class="border-t border-slate-100 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
+        <div class="max-w-3xl">
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-500">Detailed Services</div>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight">Service Portfolio</h2>
+          <p class="mt-4 text-slate-600">
+            Consulting-grade capabilities aligned to the FOREMENTOR Intelligent Enterprise Model.
+          </p>
+        </div>
+
+        <div class="mt-10 space-y-8">
+
+          <!-- 1 -->
+          <section class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft">
+            <div class="grid gap-8 lg:grid-cols-[280px_1fr]">
+              <div>
+                <div class="inline-flex rounded-full bg-foreorange/10 px-3 py-1 text-xs font-semibold text-foreorange">01</div>
+                <h3 class="mt-4 text-2xl font-bold tracking-tight">Strategy & Transformation Advisory</h3>
+                <p class="mt-3 text-sm leading-7 text-slate-600">
+                  Build the right roadmap before scaling execution.
+                </p>
+              </div>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Digital Transformation Strategy</div><p class="mt-2 text-sm text-slate-600">Define how the business should evolve across systems, processes, customer engagement, and decision-making.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">AI Adoption & Automation Roadmap</div><p class="mt-2 text-sm text-slate-600">Identify the highest-value opportunities to introduce AI, automation, and intelligent workflows.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Data Strategy & Intelligence Roadmap</div><p class="mt-2 text-sm text-slate-600">Establish data foundations, KPI structures, reporting logic, and governance for decision-ready operations.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Business Model Design & Structuring</div><p class="mt-2 text-sm text-slate-600">Review and strengthen how the business creates value, serves customers, monetizes offerings, and scales sustainably.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Market Entry & GCC Expansion Strategy</div><p class="mt-2 text-sm text-slate-600">Support market entry, regional growth planning, go-to-market design, and readiness for expansion.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Growth Strategy & Commercial Planning</div><p class="mt-2 text-sm text-slate-600">Design practical pathways for revenue growth, customer acquisition, retention, and performance improvement.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Customer Experience Strategy</div><p class="mt-2 text-sm text-slate-600">Structure how customers discover, engage, buy, onboard, and remain loyal to the business.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Performance Governance Design</div><p class="mt-2 text-sm text-slate-600">Create KPI ownership models, reporting routines, and review frameworks for execution discipline.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Operating Model Assessment</div><p class="mt-2 text-sm text-slate-600">Evaluate how teams, systems, and workflows function and identify gaps affecting efficiency and scalability.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Transformation Prioritization Framework</div><p class="mt-2 text-sm text-slate-600">Sequence initiatives in the right order based on business value, feasibility, and execution readiness.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 2 -->
+          <section class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft">
+            <div class="grid gap-8 lg:grid-cols-[280px_1fr]">
+              <div>
+                <div class="inline-flex rounded-full bg-foreblue/10 px-3 py-1 text-xs font-semibold text-foreblue">02</div>
+                <h3 class="mt-4 text-2xl font-bold tracking-tight">AI Automation</h3>
+                <p class="mt-3 text-sm leading-7 text-slate-600">
+                  Automate workflows, reduce manual dependency, and improve response speed.
+                </p>
+              </div>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Workflow Automation Design</div><p class="mt-2 text-sm text-slate-600">Map, redesign, and automate recurring workflows across departments.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">AI Process Automation</div><p class="mt-2 text-sm text-slate-600">Deploy intelligent automation for routine operational decisions and repetitive internal processes.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Robotic Process Automation (RPA)</div><p class="mt-2 text-sm text-slate-600">Automate rule-based tasks such as data transfer, form completion, and reporting routines.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Document Processing Automation</div><p class="mt-2 text-sm text-slate-600">Extract, classify, and process information from invoices, forms, contracts, and requests.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">AI Assistants & Business Support Bots</div><p class="mt-2 text-sm text-slate-600">Deploy internal or customer-facing assistants to support service delivery and task handling.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Approval Workflow Automation</div><p class="mt-2 text-sm text-slate-600">Automate approval flows for finance, HR, procurement, customer requests, and escalations.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Sales & Lead Workflow Automation</div><p class="mt-2 text-sm text-slate-600">Reduce manual handoffs in inquiry handling, lead assignment, and follow-up flows.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Operational Alerts & Trigger-Based Actions</div><p class="mt-2 text-sm text-slate-600">Create automated alerts and action flows based on thresholds, deadlines, and business events.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Process Efficiency Optimization</div><p class="mt-2 text-sm text-slate-600">Analyze workflows and redesign them to reduce delays, duplication, and manual bottlenecks.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Automation Opportunity Assessment</div><p class="mt-2 text-sm text-slate-600">Evaluate departments and workflows to identify the best use cases for automation.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 3 -->
+          <section class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft">
+            <div class="grid gap-8 lg:grid-cols-[280px_1fr]">
+              <div>
+                <div class="inline-flex rounded-full bg-foreorange/10 px-3 py-1 text-xs font-semibold text-foreorange">03</div>
+                <h3 class="mt-4 text-2xl font-bold tracking-tight">ERP Solutions</h3>
+                <p class="mt-3 text-sm leading-7 text-slate-600">
+                  Connect enterprise functions into one integrated operating environment.
+                </p>
+              </div>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">ERP Requirement Mapping</div><p class="mt-2 text-sm text-slate-600">Assess business needs and define the ERP structure required across core functions.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">ERP Implementation Support</div><p class="mt-2 text-sm text-slate-600">Support the deployment of ERP systems aligned to business processes and reporting needs.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">ERP Process Design</div><p class="mt-2 text-sm text-slate-600">Align workflows, roles, approvals, and data structures to enterprise system logic.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Finance Module Structuring</div><p class="mt-2 text-sm text-slate-600">Set up accounting, budgeting, receivables, payables, cash flow, and reporting structures.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">HR & Payroll Integration</div><p class="mt-2 text-sm text-slate-600">Support employee lifecycle, payroll logic, and workforce administration within integrated systems.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Procurement & Vendor Workflow Structuring</div><p class="mt-2 text-sm text-slate-600">Improve request flows, approvals, vendor records, order tracking, and procurement reporting.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Inventory & Supply Chain Integration</div><p class="mt-2 text-sm text-slate-600">Bring purchasing, stock, warehousing, and supply visibility into one structured platform.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">CRM to ERP Integration</div><p class="mt-2 text-sm text-slate-600">Connect commercial data and customer-facing processes to finance and operations.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Reporting Layer Integration</div><p class="mt-2 text-sm text-slate-600">Ensure ERP outputs feed dashboards, KPIs, management reports, and BI tools.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">ERP Optimization & Cleanup</div><p class="mt-2 text-sm text-slate-600">Improve underperforming implementations by fixing process gaps and reporting issues.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 4 -->
+          <section class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft">
+            <div class="grid gap-8 lg:grid-cols-[280px_1fr]">
+              <div>
+                <div class="inline-flex rounded-full bg-foregreen/10 px-3 py-1 text-xs font-semibold text-foregreen">04</div>
+                <h3 class="mt-4 text-2xl font-bold tracking-tight">Data Analytics & Business Intelligence</h3>
+                <p class="mt-3 text-sm leading-7 text-slate-600">
+                  Turn operational data into executive decision intelligence.
+                </p>
+              </div>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Business Intelligence Framework Design</div><p class="mt-2 text-sm text-slate-600">Create the structure and reporting architecture needed for management visibility.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">KPI Architecture Development</div><p class="mt-2 text-sm text-slate-600">Define business-critical performance indicators across finance, operations, sales, and service.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Dashboard Design & Executive Reporting</div><p class="mt-2 text-sm text-slate-600">Build visual reporting environments for leadership teams and managers.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Performance Analytics</div><p class="mt-2 text-sm text-slate-600">Track business results across sales, operations, marketing, service, and finance.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Customer Analytics</div><p class="mt-2 text-sm text-slate-600">Understand acquisition, behavior, engagement, retention, and value creation patterns.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Sales Analytics</div><p class="mt-2 text-sm text-slate-600">Track pipeline performance, conversion, revenue movement, lead sources, and sales productivity.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Operational Analytics</div><p class="mt-2 text-sm text-slate-600">Measure turnaround times, workload efficiency, service bottlenecks, and team productivity.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Management Reporting Systems</div><p class="mt-2 text-sm text-slate-600">Structure monthly, weekly, and executive review reporting across the organization.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Forecasting & Trend Analysis</div><p class="mt-2 text-sm text-slate-600">Support better planning through historical data interpretation and forward-looking insight.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Data Quality & Reporting Discipline</div><p class="mt-2 text-sm text-slate-600">Improve reporting consistency by strengthening definitions, source alignment, and governance discipline.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5 -->
+          <section class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft">
+            <div class="grid gap-8 lg:grid-cols-[280px_1fr]">
+              <div>
+                <div class="inline-flex rounded-full bg-foreblue/10 px-3 py-1 text-xs font-semibold text-foreblue">05</div>
+                <h3 class="mt-4 text-2xl font-bold tracking-tight">Marketing Automation</h3>
+                <p class="mt-3 text-sm leading-7 text-slate-600">
+                  Create structured demand generation and scalable engagement systems.
+                </p>
+              </div>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Marketing Workflow Design</div><p class="mt-2 text-sm text-slate-600">Build structured flows for inquiries, follow-ups, lead segmentation, and campaign response handling.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Lead Nurturing Automation</div><p class="mt-2 text-sm text-slate-600">Create automated engagement journeys based on behavior, source, stage, and intent.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Customer Journey Automation</div><p class="mt-2 text-sm text-slate-600">Support lifecycle journeys from awareness to conversion and retention.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Email Marketing Automation</div><p class="mt-2 text-sm text-slate-600">Develop automated email flows for outreach, nurturing, activation, and engagement.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Audience Segmentation Systems</div><p class="mt-2 text-sm text-slate-600">Structure target groups for more relevant communication and stronger campaign performance.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Engagement Trigger Systems</div><p class="mt-2 text-sm text-slate-600">Deploy logic-based communication actions linked to user behavior and customer events.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Conversion Funnel Structuring</div><p class="mt-2 text-sm text-slate-600">Map and improve the path from awareness to inquiry to conversion.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Marketing Performance Tracking</div><p class="mt-2 text-sm text-slate-600">Track campaign outputs, lead quality, engagement quality, and channel effectiveness.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Retention Marketing Automation</div><p class="mt-2 text-sm text-slate-600">Design communications that increase repeat business, loyalty, and reactivation.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Marketing Operations Support</div><p class="mt-2 text-sm text-slate-600">Support the operational running of marketing workflows and lead management systems.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 6 -->
+          <section class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft">
+            <div class="grid gap-8 lg:grid-cols-[280px_1fr]">
+              <div>
+                <div class="inline-flex rounded-full bg-foreorange/10 px-3 py-1 text-xs font-semibold text-foreorange">06</div>
+                <h3 class="mt-4 text-2xl font-bold tracking-tight">Customer Care Management</h3>
+                <p class="mt-3 text-sm leading-7 text-slate-600">
+                  Improve service quality, response systems, and customer experience control.
+                </p>
+              </div>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Customer Support Process Design</div><p class="mt-2 text-sm text-slate-600">Design response systems that improve service consistency and accountability.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Omnichannel Customer Care Structure</div><p class="mt-2 text-sm text-slate-600">Organize service workflows across phone, WhatsApp, email, website inquiries, and CRM-linked channels.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Customer Service Workflow Management</div><p class="mt-2 text-sm text-slate-600">Improve ticket handling, escalation routing, issue resolution, and follow-up discipline.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Customer Response Standards</div><p class="mt-2 text-sm text-slate-600">Define service levels, turnaround expectations, and internal service quality measures.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">CRM-Linked Service Management</div><p class="mt-2 text-sm text-slate-600">Connect support activity to customer records, history, service context, and performance reporting.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Customer Experience Improvement Programs</div><p class="mt-2 text-sm text-slate-600">Identify pain points and redesign service interactions for a better overall experience.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Support Team Performance Measurement</div><p class="mt-2 text-sm text-slate-600">Track responsiveness, closure rates, service quality, and customer satisfaction indicators.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Feedback Capture & Analysis</div><p class="mt-2 text-sm text-slate-600">Collect and interpret customer feedback for service improvement and retention strategy.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Service Desk Structuring</div><p class="mt-2 text-sm text-slate-600">Organize support desks for more scalable and trackable service operations.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Retention & Relationship Support Systems</div><p class="mt-2 text-sm text-slate-600">Create support routines that contribute to loyalty, repeat engagement, and stronger trust.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 7 -->
+          <section class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft">
+            <div class="grid gap-8 lg:grid-cols-[280px_1fr]">
+              <div>
+                <div class="inline-flex rounded-full bg-foregreen/10 px-3 py-1 text-xs font-semibold text-foregreen">07</div>
+                <h3 class="mt-4 text-2xl font-bold tracking-tight">Campaign Automation & Management</h3>
+                <p class="mt-3 text-sm leading-7 text-slate-600">
+                  Plan, execute, monitor, and improve campaigns with discipline and visibility.
+                </p>
+              </div>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Campaign Strategy Structuring</div><p class="mt-2 text-sm text-slate-600">Define objectives, target groups, channels, and performance logic for campaigns.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Campaign Workflow Design</div><p class="mt-2 text-sm text-slate-600">Structure workflows for launch, follow-up, approvals, and monitoring.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Multi-Channel Campaign Coordination</div><p class="mt-2 text-sm text-slate-600">Manage integrated campaigns across digital, email, CRM, sales outreach, and customer channels.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Lead Capture & Routing Systems</div><p class="mt-2 text-sm text-slate-600">Ensure inquiries and campaign responses are captured and assigned properly.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Campaign Tracking & Dashboarding</div><p class="mt-2 text-sm text-slate-600">Create dashboards that measure campaign performance, response quality, and business outcomes.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Customer Reactivation Campaigns</div><p class="mt-2 text-sm text-slate-600">Design structured outreach to dormant customers, past leads, or under-engaged segments.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Engagement Sequence Automation</div><p class="mt-2 text-sm text-slate-600">Build timed and trigger-based follow-up flows for campaign responders.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">A/B Testing & Response Analysis</div><p class="mt-2 text-sm text-slate-600">Evaluate campaign variants and improve based on real response patterns.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">ROI & Conversion Analysis</div><p class="mt-2 text-sm text-slate-600">Link campaign spending and activity to revenue outcomes, lead quality, and conversion performance.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Campaign Operations Support</div><p class="mt-2 text-sm text-slate-600">Provide structured operational support to manage campaigns more consistently.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 8 -->
+          <section class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft">
+            <div class="grid gap-8 lg:grid-cols-[280px_1fr]">
+              <div>
+                <div class="inline-flex rounded-full bg-foreblue/10 px-3 py-1 text-xs font-semibold text-foreblue">08</div>
+                <h3 class="mt-4 text-2xl font-bold tracking-tight">Market Intelligence & Executive Dashboards</h3>
+                <p class="mt-3 text-sm leading-7 text-slate-600">
+                  Strengthen market visibility and strategic decision-making.
+                </p>
+              </div>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Market Intelligence Frameworks</div><p class="mt-2 text-sm text-slate-600">Structure how market signals, competitor activity, customer trends, and opportunity data are monitored.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Competitor Intelligence Tracking</div><p class="mt-2 text-sm text-slate-600">Monitor competitor moves, pricing shifts, positioning, and market behavior.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Executive Decision Dashboards</div><p class="mt-2 text-sm text-slate-600">Create high-level dashboards for leadership teams covering performance, trends, and strategic priorities.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Customer Behavior Intelligence</div><p class="mt-2 text-sm text-slate-600">Track how customers enter, interact, convert, and disengage across key touchpoints.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Sales & Growth Dashboards</div><p class="mt-2 text-sm text-slate-600">Provide visibility on lead flow, sales conversion, revenue trends, and channel performance.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Operational Dashboard Systems</div><p class="mt-2 text-sm text-slate-600">Show service levels, process efficiency, workflow bottlenecks, and execution discipline.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Strategic Performance Reporting</div><p class="mt-2 text-sm text-slate-600">Support leadership reviews through structured reporting on high-priority metrics and initiatives.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Trend Interpretation & Insight Reporting</div><p class="mt-2 text-sm text-slate-600">Translate data into management insight rather than just visual output.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Retail / Facility / Service Environment Analytics</div><p class="mt-2 text-sm text-slate-600">Support visual intelligence or operational visibility frameworks for physical business environments.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Board-Ready Reporting Views</div><p class="mt-2 text-sm text-slate-600">Prepare structured reporting formats suitable for senior management and stakeholders.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 9 -->
+          <section class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft">
+            <div class="grid gap-8 lg:grid-cols-[280px_1fr]">
+              <div>
+                <div class="inline-flex rounded-full bg-foreorange/10 px-3 py-1 text-xs font-semibold text-foreorange">09</div>
+                <h3 class="mt-4 text-2xl font-bold tracking-tight">Business Performance Analysis, Accounting & CFO Services</h3>
+                <p class="mt-3 text-sm leading-7 text-slate-600">
+                  Bring stronger financial control, visibility, and strategic management support.
+                </p>
+              </div>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Business Performance Analysis</div><p class="mt-2 text-sm text-slate-600">Assess profitability, cost structure, efficiency trends, productivity, and growth performance.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Management Reporting Systems</div><p class="mt-2 text-sm text-slate-600">Build reporting environments that give leadership a clearer view of results and issues.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Profitability Analysis</div><p class="mt-2 text-sm text-slate-600">Understand which products, services, channels, teams, or customer groups create or reduce value.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Budgeting & Planning Support</div><p class="mt-2 text-sm text-slate-600">Support planning cycles, budget structuring, and financial target alignment.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Cash Flow Visibility & Control</div><p class="mt-2 text-sm text-slate-600">Improve the tracking and management of working capital, collections, obligations, and cash planning.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Accounting Process Review</div><p class="mt-2 text-sm text-slate-600">Assess accounting structures, reporting quality, controls, and management usefulness.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Finance Dashboard Design</div><p class="mt-2 text-sm text-slate-600">Provide leadership with financial dashboards linked to business performance and operating realities.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Cost Optimization Review</div><p class="mt-2 text-sm text-slate-600">Identify cost inefficiencies, leakages, and opportunities for stronger financial discipline.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Fractional / Virtual CFO Services</div><p class="mt-2 text-sm text-slate-600">Provide strategic finance support for companies needing senior insight without a full-time CFO.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Board & Investor Reporting Support</div><p class="mt-2 text-sm text-slate-600">Prepare structured financial and management views suitable for senior stakeholders.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 10 -->
+          <section class="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-soft">
+            <div class="grid gap-8 lg:grid-cols-[280px_1fr]">
+              <div>
+                <div class="inline-flex rounded-full bg-foregreen/10 px-3 py-1 text-xs font-semibold text-foregreen">10</div>
+                <h3 class="mt-4 text-2xl font-bold tracking-tight">Managed Operations Support</h3>
+                <p class="mt-3 text-sm leading-7 text-slate-600">
+                  Ensure systems continue to perform after implementation.
+                </p>
+              </div>
+              <div class="grid gap-4 md:grid-cols-2">
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Managed Reporting Support</div><p class="mt-2 text-sm text-slate-600">Provide recurring dashboard updates, management reporting, and performance reviews.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Operational Review Cadence</div><p class="mt-2 text-sm text-slate-600">Support monthly and quarterly review routines across functions and leadership teams.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Campaign Operations Support</div><p class="mt-2 text-sm text-slate-600">Help manage live campaign environments and ongoing performance monitoring.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Customer System Oversight</div><p class="mt-2 text-sm text-slate-600">Track customer care systems, CRM workflows, response processes, and experience indicators.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Automation Performance Monitoring</div><p class="mt-2 text-sm text-slate-600">Review the effectiveness of automated workflows and improve logic over time.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">KPI Governance Support</div><p class="mt-2 text-sm text-slate-600">Maintain metric discipline and reporting consistency across departments.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Continuous Improvement Programs</div><p class="mt-2 text-sm text-slate-600">Identify gaps, improvement opportunities, and actions to optimize performance.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Cross-Functional Alignment Support</div><p class="mt-2 text-sm text-slate-600">Improve coordination between sales, marketing, operations, finance, and customer teams.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Executive Review Support</div><p class="mt-2 text-sm text-slate-600">Structure review sessions with clear reporting, insight summaries, and decision support.</p></div>
+                <div class="rounded-2xl bg-slate-50 p-5"><div class="font-semibold">Post-Implementation Stabilization</div><p class="mt-2 text-sm text-slate-600">Support organizations after rollout to ensure systems are adopted properly and performance is sustained.</p></div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- DELIVERY APPROACH -->
+    <section class="border-t border-slate-100 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
+        <div class="max-w-3xl">
+          <div class="text-xs font-semibold uppercase tracking-wider text-slate-500">Delivery Approach</div>
+          <h2 class="mt-2 text-3xl font-extrabold tracking-tight">How We Deliver</h2>
+          <p class="mt-4 text-slate-600">
+            A structured engagement model that moves clients from planning to execution with clarity, governance, and measurable outcomes.
+          </p>
+        </div>
+
+        <div class="mt-10 grid gap-6 md:grid-cols-4">
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <div class="text-sm font-semibold text-foreorange">01</div>
+            <h3 class="mt-2 text-xl font-bold">Assess</h3>
+            <p class="mt-3 text-sm text-slate-600">Evaluate business maturity, system readiness, customer flows, reporting quality, and performance gaps.</p>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <div class="text-sm font-semibold text-foreblue">02</div>
+            <h3 class="mt-2 text-xl font-bold">Design</h3>
+            <p class="mt-3 text-sm text-slate-600">Define strategy, operating models, workflow structures, KPI logic, and implementation priorities.</p>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <div class="text-sm font-semibold text-foregreen">03</div>
+            <h3 class="mt-2 text-xl font-bold">Implement</h3>
+            <p class="mt-3 text-sm text-slate-600">Deploy systems, automation, dashboards, and customer-performance structures.</p>
+          </div>
+          <div class="rounded-3xl border border-slate-200 bg-slate-50 p-6">
+            <div class="text-sm font-semibold text-foreblue">04</div>
+            <h3 class="mt-2 text-xl font-bold">Optimize</h3>
+            <p class="mt-3 text-sm text-slate-600">Improve performance through reporting, managed support, CFO insight, and continuous refinement.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="border-t border-slate-100 bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-14 md:py-20">
+        <div class="rounded-3xl bg-gradient-to-r from-foreblue via-foreorange to-foregreen p-8 text-white shadow-soft md:p-12">
+          <div class="grid gap-8 md:grid-cols-2 md:items-center">
+            <div>
+              <h2 class="text-3xl font-extrabold tracking-tight">Build an Intelligent Enterprise with FOREMENTOR</h2>
+              <p class="mt-3 text-white/90">
+                Whether you are strengthening strategy, implementing systems, automating workflows, improving customer performance, or building executive visibility, Forementor helps you move with more clarity, control, and confidence.
+              </p>
+            </div>
+            <div class="flex flex-col gap-3 sm:flex-row sm:justify-end">
+              <a href="contact.html#consult"
+                 class="inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 hover:opacity-95">
+                Request Business Assessment
+              </a>
+              <a href="https://wa.me/971542800300"
+                 target="_blank"
+                 rel="noopener"
+                 class="inline-flex items-center justify-center rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white hover:bg-white/15">
+                Speak on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
   <footer class="border-t border-slate-200 bg-slate-50">
     <div class="mx-auto grid max-w-7xl gap-10 px-4 py-12 md:grid-cols-4">
       <div>
-        <div class="flex items-center gap-3">
-           <img src="Logo.svg" alt="FOREMENTOR logo" class="h-20 w-auto scale-125 origin-left" />
-       </div>
+        <img src="Logo.svg" alt="FOREMENTOR logo" class="h-20 w-auto scale-125 origin-left" />
         <p class="mt-4 text-sm text-slate-600">
-          We design intelligence & market architecture, execute with precision, and maintain for sustainable growth.
+          We design strategy, implement intelligent systems, and optimize performance for sustainable business growth.
         </p>
       </div>
 
@@ -165,20 +516,22 @@
           <li><a class="text-slate-600 hover:text-foreblue" href="index.html">Home</a></li>
           <li><a class="text-slate-600 hover:text-foreblue" href="about.html">About</a></li>
           <li><a class="text-slate-600 hover:text-foreblue" href="services.html">Services</a></li>
+          <li><a class="text-slate-600 hover:text-foreblue" href="industries.html">Industries</a></li>
+          <li><a class="text-slate-600 hover:text-foreblue" href="methodology.html">Methodology</a></li>
           <li><a class="text-slate-600 hover:text-foreblue" href="blog.html">Insights</a></li>
           <li><a class="text-slate-600 hover:text-foreblue" href="contact.html">Contact</a></li>
         </ul>
       </div>
 
       <div>
-        <div class="text-sm font-semibold text-slate-900">Services</div>
+        <div class="text-sm font-semibold text-slate-900">Focus Areas</div>
         <ul class="mt-3 space-y-2 text-sm text-slate-600">
-          <li>Strategy & Market Structuring</li>
-          <li>Customer & Relationship Growth</li>
-          <li>Data & Intelligence Governance</li>
-          <li>Technology & Systems</li>
-          <li>Dashboards & KPI Monitoring</li>
-          <li>Campaign & Engagement</li>
+          <li>Strategy & Transformation Advisory</li>
+          <li>AI Automation</li>
+          <li>ERP Solutions</li>
+          <li>Data Analytics & BI</li>
+          <li>Marketing & Customer Systems</li>
+          <li>CFO & Managed Operations</li>
         </ul>
       </div>
 
@@ -195,7 +548,7 @@
     <div class="border-t border-slate-200">
       <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-6 text-xs text-slate-500 md:flex-row">
         <div>© <span id="year"></span> forementor.com. All rights reserved.</div>
-        <div>Built for performance • Mobile-first • SEO-ready</div>
+        <div>Strategy • Intelligent Systems • Analytics • Managed Performance</div>
       </div>
     </div>
   </footer>
@@ -203,13 +556,16 @@
   <script>
     const btn = document.getElementById('menuBtn');
     const menu = document.getElementById('mobileMenu');
-    if (btn && menu) {{
-      btn.addEventListener('click', () => {{
+
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
         menu.classList.toggle('hidden');
-      }});
-    }}
+      });
+    }
+
     const y = document.getElementById('year');
     if (y) y.textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
